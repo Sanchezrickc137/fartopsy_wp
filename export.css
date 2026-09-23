@@ -1,0 +1,13 @@
+/* Standalone controls; all Welcome artwork and animation styles stay original. */
+.modern .site-header nav { display:flex; width:max-content; justify-self:end; }
+.modern .site-header nav a[data-nav] { padding-inline:20px; }
+.modern .export-toolbar { display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-left:auto; }
+.modern .export-control { border:1px solid #c1a3d377; border-radius:12px; padding:8px 12px; color:#f5dfbd; background:#392244; font:400 18px/1.25 'Patrick Hand',cursive; box-shadow:0 3px #1c0d2a; min-height:40px; cursor:pointer; }
+.modern .export-control:hover { background:#543564; }
+.modern .export-control:focus-visible { outline:3px solid #ffe6ab; outline-offset:4px; }
+.modern dialog.export-dialog { width:min(570px,calc(100% - 32px)); max-height:calc(100dvh - 40px); overflow:auto; padding:32px; color:#f4e2cc; border:1px solid #c3a4d7; border-radius:26px; background:#392846; box-shadow:0 9px #150b2080; font:400 24px/1.5 'Patrick Hand',cursive; }
+.modern .export-dialog h2 { font:400 42px/1.15 'Patrick Hand',cursive; color:#ffe6ab; margin:12px 0 24px; }
+.modern .export-dialog .dialog-close { float:right; width:42px; height:42px; }
+.modern .export-dialog a { text-decoration:underline; text-underline-offset:3px; }
+.modern .export-dialog button { font-family:'Patrick Hand',cursive; }
+@media(max-width:720px) { .modern .export-toolbar { width:100%; justify-content:center; margin:12px 0 0; } }

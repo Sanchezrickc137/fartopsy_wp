@@ -1,0 +1,194 @@
+.modern .journeys{ max-width: 1080px; margin-inline: auto; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); }
+.modern .journey.folder-card{
+  --folder-edge: #eee1ff;
+  --folder-back: #8560ac;
+  --folder-paper: #e3d2fb;
+  --folder-ink: #523071;
+  --folder-copy: #593d71;
+  --folder-turn: -7deg;
+  --folder-travel: 5.8rem;
+  --folder-open: 0rem;
+  --folder-ease: cubic-bezier(.22, 1, .36, 1);
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: 8.8rem auto minmax(6.4rem, 1fr) auto;
+  justify-content: stretch;
+  gap: 0;
+  min-height: 25.5rem;
+  height: 100%;
+  padding: 1.65rem;
+  border: 1px solid #dfc9f770;
+  border-radius: 1.6rem;
+  background: var(--folder-back);
+  color: #2c2039;
+  font-family: 'Patrick Hand', cursive;
+  font-weight: 400;
+  font-synthesis: none;
+  text-decoration: none;
+  transform: none;
+  box-shadow: 0 5px 0 var(--card-shadow), 0 12px 28px #09031328;
+  transition: border-color 250ms, box-shadow 400ms;
+}
+.modern .journey-socials.folder-card{
+  --folder-edge: #fff0d3;
+  --folder-back: #bd814f;
+  --folder-paper: #ffebc8;
+  --folder-ink: #703b25;
+  --folder-copy: #744833;
+  --folder-turn: 6deg;
+  border-color: #ffdeb578;
+}
+.modern .journey-guestbook.folder-card{
+  --folder-edge: #e0fff1;
+  --folder-back: #568f89;
+  --folder-paper: #d5f3e7;
+  --folder-ink: #235a53;
+  --folder-copy: #38635f;
+  --folder-turn: -5deg;
+  border-color: #c4efe478;
+}
+.modern .folder-card .folder-visual{
+  position: absolute;
+  inset: 4px;
+  overflow: hidden;
+  border-radius: calc(1.6rem - 4px);
+  pointer-events: none;
+}
+.modern .folder-backlight{
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 14%, #ffffff52, transparent 67%);
+}
+.modern .folder-paper{
+  position: absolute;
+  inset: 2rem 1.8rem auto;
+  height: 13.5rem;
+  border: 1px solid #fff9;
+  border-radius: 1rem;
+  background: var(--folder-paper);
+  opacity: .45;
+  transform: translateY(2.5rem) rotate(-4deg);
+  transition: transform 680ms var(--folder-ease), opacity 500ms;
+}
+.modern .folder-card .journey-art{
+  position: absolute;
+  inset: .6rem 0 auto;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 12rem;
+  margin: 0;
+  transform: translateY(2.5rem) scale(.84);
+  transition: transform 760ms var(--folder-ease);
+}
+.modern .folder-card .journey-art img{
+  display: block;
+  width: auto;
+  height: 12.5rem;
+  max-width: 80%;
+  max-height: none;
+  object-fit: contain;
+  transform: rotate(0deg);
+  transition: transform 760ms var(--folder-ease);
+}
+.modern .folder-card .folder-front{
+  position: absolute;
+  top: 6.9rem;
+  left: 0;
+  right: 0;
+  height: 100%;
+  color: var(--card);
+  transform: translateY(var(--folder-open));
+  transition: transform 720ms var(--folder-ease);
+}
+.modern .folder-front svg{ display: block; width: 100%; height: 100%; }
+.modern .folder-card .journey-copy{ display: contents; margin: 0; }
+.modern .folder-card .journey-title{
+  position: relative;
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .65rem;
+  color: var(--folder-ink);
+  font-family: 'Patrick Hand', cursive;
+  font-weight: 400;
+  font-size: clamp(1.6rem, 2.7vw, 2.3rem);
+  line-height: 1.2;
+  transform: translateY(var(--folder-open));
+  transition: transform 720ms var(--folder-ease);
+}
+.modern .folder-card .journey-title > span:first-child{ min-width: 0; overflow-wrap: anywhere; }
+.modern .folder-card .round-arrow{
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-color: #39234640;
+  background: #fff7e329;
+  transform: none;
+  transition: background 320ms, transform 500ms var(--folder-ease);
+}
+.modern .folder-card .journey-description{
+  position: relative;
+  grid-row: 4;
+  margin: 0;
+  max-width: 25ch;
+  color: var(--folder-copy);
+  font-family: 'Patrick Hand', cursive;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.modern .journey.folder-card:hover,
+.modern .journey.folder-card:focus-visible,
+.modern .journey.folder-card:active{
+  background: var(--folder-back);
+  transform: none;
+  border-color: var(--folder-edge);
+  box-shadow: 0 5px 0 var(--card-shadow), 0 14px 32px #09031333;
+}
+.modern.motion-on .folder-card:focus-visible{ --folder-open: var(--folder-travel); }
+.modern.motion-on .folder-card:focus-visible .journey-art{ transform: translateY(-.2rem) scale(1.04); }
+.modern.motion-on .folder-card:focus-visible .journey-art img{ transform: rotate(var(--folder-turn)); }
+.modern.motion-on .folder-card:focus-visible .folder-paper{ transform: translateY(.3rem) rotate(4deg); opacity: .75; }
+.modern.motion-on .folder-card:focus-visible .round-arrow{ transform: translate(2px,-2px); background: #fff4cd; }
+@media (hover: hover) and (pointer: fine){.modern.motion-on .folder-card:hover{ --folder-open: var(--folder-travel); }
+.modern.motion-on .folder-card:hover .journey-art{ transform: translateY(-.2rem) scale(1.04); }
+.modern.motion-on .folder-card:hover .journey-art img{ transform: rotate(var(--folder-turn)); }
+.modern.motion-on .folder-card:hover .folder-paper{ transform: translateY(.3rem) rotate(4deg); opacity: .75; }
+.modern.motion-on .folder-card:hover .round-arrow{ transform: translate(2px,-2px); background: #fff4cd; }
+
+}
+@media (hover: none), (pointer: coarse){.modern .journey.folder-card{ --folder-open: var(--folder-travel); }
+.modern .folder-card .journey-art{ transform: translateY(-.2rem); }
+.modern .folder-card .folder-paper{ transform: translateY(.3rem) rotate(4deg); }
+
+}
+.modern.motion-paused .journey.folder-card{ --folder-open: var(--folder-travel); }
+.modern.motion-paused .folder-card .journey-art{ transform: translateY(-.2rem); }
+.modern.motion-paused .folder-card .journey-art img,
+.modern.motion-paused .folder-card .round-arrow{ transform: none; }
+.modern.motion-paused .folder-card .folder-paper{ transform: translateY(.3rem) rotate(4deg); }
+@media (prefers-reduced-motion: reduce){.modern .journey.folder-card{ --folder-open: var(--folder-travel); }
+.modern .folder-card .journey-art{ transform: translateY(-.2rem) !important; }
+.modern .folder-card .journey-art img,
+  .modern .folder-card .round-arrow{ transform: none !important; }
+.modern .folder-card .folder-paper{ transform: translateY(.3rem) rotate(4deg) !important; }
+.modern .folder-card *{ transition: none !important; }
+
+}
+@media (max-width: 800px){.modern .journey.folder-card{ padding-inline: 1.1rem; }
+
+}
+@media (max-width: 600px){.modern .journeys{ gap: 1.6rem; }
+.modern .journey.folder-card{ min-height: 25rem; padding: 1.5rem; }
+.modern .folder-card .journey-title{ font-size: 2rem; }
+
+}
+

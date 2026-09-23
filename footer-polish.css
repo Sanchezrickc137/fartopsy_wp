@@ -1,0 +1,186 @@
+.modern .site-footer .footer-top{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+  align-items: center;
+  gap: 32px 64px;
+  padding-block: 48px 16px;
+}
+.modern .site-footer .footer-signature{
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr);
+  align-items: start;
+  gap: 24px;
+  min-width: 0;
+}
+.modern .site-footer .footer-star{
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin-top: 3px;
+  color: var(--lavender);
+}
+.modern .site-footer .footer-star svg{ display: block; width: 100%; height: 100%; overflow: visible; }
+.modern .site-footer .footer-star path{
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 550ms cubic-bezier(.22, 1, .36, 1);
+}
+.modern .site-footer .footer-signature-copy{ min-width: 0; }
+.modern .site-footer .footer-name{
+  display: inline-block;
+  max-width: 100%;
+  min-height: 44px;
+  padding: 0;
+  color: #fff0c6;
+  font: var(--font-display-weight, 700) clamp(2rem, 4vw, 3.5rem)/1.14 var(--font-display, Maple, sans-serif);
+  letter-spacing: -.045em;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+.modern .site-footer .footer-note{
+  display: block;
+  margin-top: 13px;
+  color: #d8c2e5;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+.modern .site-footer .footer-love{ color: #ffcfac; white-space: nowrap; }
+.modern .site-footer .character-credit{
+  margin: 19px 0 0;
+  max-width: 46ch;
+  color: #ccb7d9;
+  font-size: 1rem;
+  line-height: 1.95;
+  overflow-wrap: anywhere;
+}
+.modern .site-footer .character-credit a{
+  display: inline;
+  min-height: 0;
+  padding: 0;
+  color: #e9cef8;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+.modern .site-footer .character-credit > span{ color: #bca5cb; }
+.modern .site-footer .city{
+  position: absolute;
+  inset: auto 0 0;
+  margin: 0;
+}
+.modern .site-footer .footer-bottom{
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  padding: 4rem 24px 1.5rem;
+}
+.modern .site-footer .footer-ascent{
+  position: relative;
+  display: block;
+  width: 4.5rem;
+  height: 4.5rem;
+  max-width: 100%;
+  min-height: 44px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  color: #ffe6b3;
+  font-size: 1rem;
+  line-height: 1;
+  transform: none;
+  transition: none;
+}
+.modern .site-footer .footer-ascent svg,
+.modern .site-footer .footer-ascent:hover svg{
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -3.875rem;
+  width: min(10rem, calc(100vw - 48px));
+  max-width: none;
+  height: auto;
+  overflow: visible;
+  pointer-events: none;
+  transform: translateX(-50%);
+  transition: none;
+}
+.modern .site-footer .footer-ascent:hover{ transform: none; background: none; }
+.modern .site-footer .back-top-label{
+  
+  clip-path: inset(-40% 100% -40% -40%);
+  opacity: 0;
+  transition: clip-path 650ms cubic-bezier(.22, 1, .36, 1), opacity 350ms ease;
+}
+.modern .site-footer .back-top-arc{
+  fill: #f5deff;
+  font: var(--font-display-weight, 700) 20px var(--font-display, Maple, sans-serif);
+  letter-spacing: .7px;
+  filter: drop-shadow(0 0 4px #d3a4fa99) drop-shadow(0 0 10px #bd8ce64d);
+}
+.modern .site-footer .back-top-arrow{
+  transform-origin: 75px 90px;
+}
+.modern.motion-on:not(.document-hidden) .site-footer .back-top-arrow{
+  animation: back-top-nudge 2400ms cubic-bezier(.45, 0, .25, 1) infinite;
+}
+@keyframes back-top-nudge{
+  0%, 70%, 100% { transform: translateY(0); }
+  35% { transform: translateY(-5px); }
+}
+.modern .site-footer .back-top-spark{
+  fill: #c9a9e4;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 650ms cubic-bezier(.22, 1, .36, 1);
+}
+.modern .site-footer .footer-name:focus-visible,
+.modern .site-footer .footer-ascent:focus-visible{
+  outline: 2px solid var(--cream);
+  outline-offset: 7px;
+}
+.modern .site-footer .footer-ascent:focus-visible .back-top-label{ clip-path: inset(-40%); opacity: 1; }
+.modern .site-footer .footer-ascent:focus-visible .back-top-spark{ transform: rotate(75deg) scale(1.12); }
+.modern .site-footer .footer-signature:focus-within .signature-star-main{ transform: rotate(12deg) scale(1.035); }
+.modern .site-footer .footer-signature:focus-within .signature-star-satellite{ transform: rotate(-25deg) translateY(-2px); }
+@media (hover: hover) and (pointer: fine){.modern .site-footer .footer-ascent:hover .back-top-label{ clip-path: inset(-40%); opacity: 1; }
+.modern .site-footer .footer-ascent:hover .back-top-spark{ transform: rotate(75deg) scale(1.12); }
+.modern .site-footer .footer-signature:hover .signature-star-main{ transform: rotate(12deg) scale(1.035); }
+.modern .site-footer .footer-signature:hover .signature-star-satellite{ transform: rotate(-25deg) translateY(-2px); }
+
+}
+@media (max-width: 760px){.modern .site-footer .footer-top{ gap: 28px; padding-top: 36px; }
+.modern .site-footer .footer-signature{ grid-template-columns: 64px minmax(0, 1fr); gap: 18px; }
+.modern .site-footer .footer-star{ width: 64px; height: 64px; }
+
+}
+@media (max-width: 600px){.modern .site-footer .footer-top{ grid-template-columns: minmax(0, 1fr); gap: 16px; padding-bottom: 0; }
+.modern .site-footer .footer-signature{ grid-template-columns: minmax(0, 1fr); gap: 17px; }
+.modern .site-footer .footer-star{ width: 66px; height: 66px; margin: 0; }
+.modern .site-footer .footer-name{ font-size: clamp(2rem, 9vw, 3rem); }
+.modern .site-footer .footer-note{ font-size: 1.15rem; margin-top: 12px; }
+.modern .site-footer .character-credit{ margin-top: 17px; font-size: 1rem; }
+
+}
+@media (hover: none), (pointer: coarse){.modern .site-footer .back-top-label{ clip-path: inset(-40%); opacity: 1; transition: none; }
+
+}
+.modern:is(.motion-paused, .document-hidden) .site-footer .footer-ascent :is(.back-top-arrow, .back-top-label, .back-top-spark),
+.modern:is(.motion-paused, .document-hidden) .site-footer .footer-signature .footer-star path{
+  animation: none !important;
+  transform: none !important;
+  transition: none !important;
+}
+html.intro-active .modern .site-footer .back-top-arrow{ animation-play-state: paused !important; }
+@media (prefers-reduced-motion: reduce){.modern .site-footer .footer-ascent :is(.back-top-arrow, .back-top-label, .back-top-spark),
+  .modern .site-footer .footer-signature .footer-star path{
+    animation: none !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+}
+

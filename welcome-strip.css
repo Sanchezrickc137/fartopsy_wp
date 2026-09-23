@@ -1,0 +1,59 @@
+.modern .visitor-stage{ position: relative; width: 100%; margin: 24px auto 12px; isolation: isolate; }
+.modern .visitor-scene{ position: relative; display: grid; place-items: center; width: 100%; padding-block: clamp(130px, 15vw, 190px); }
+.modern .visitor-scene::before{ content: ''; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at center, #9e65e329, transparent 65%); }
+.modern .visitor-scene::after{ content: ''; z-index: -1; position: absolute; top: 0; bottom: 0; left: calc(50% - 9px); width: 18px; background: linear-gradient(transparent, #b794f370 20%, #fff0c8b0 50%, #b794f370 80%, transparent); filter: blur(9px); }
+.modern .visitor-light{ position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.modern .welcome-bottom.welcome-strip{
+  --visit-digit-size: clamp(4rem, 8vw, 6.5rem);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: min(480px, 100%);
+  min-width: 0;
+  min-height: 460px;
+  gap: 0;
+  margin: 0;
+  padding: 38px 32px 34px;
+  border: 1px solid #dfc3ffad;
+  border-radius: 32px;
+  background: radial-gradient(ellipse at 50% 0, #4a2c6c, transparent 58%), linear-gradient(160deg, #26143e, #1c102e 76%);
+  box-shadow: 0 0 0 1px #c5a0fd24, 0 0 24px #ba80ff4d, 0 0 80px #9160df30, inset 0 1px 1px #f0ceff63;
+  color: #efe2ff;
+  text-align: center;
+}
+.modern .welcome-strip::before{ content: ''; position: absolute; inset: -1px; border-radius: inherit; padding: 1px; pointer-events: none; background: linear-gradient(90deg, #b688eb22, #d5b6ffba 25%, #fff4d9 50%, #d5b6ffba 75%, #b688eb22); mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask-composite: exclude; }
+.modern .visitor-kicker{ display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 24px; color: #d5bbe9; font: .64rem/1.6 var(--font-body, ShortStack, sans-serif); text-transform: uppercase; letter-spacing: .12em; }
+.modern .welcome-strip .welcome-orbit{ display: grid; place-items: center; width: 26px; height: 26px; color: #ffe2a6; }
+.modern .welcome-strip .welcome-orbit svg{ width: 25px; height: 25px; stroke-width: 1.3; }
+.modern .welcome-strip .welcome-stay{ max-width: 100%; margin: 0; font: 400 clamp(1.65rem, 3vw, 2.25rem)/1.2 var(--font-display, Maple, sans-serif); color: #ffefd0; text-wrap: balance; }
+.modern .welcome-strip .welcome-stay > .welcome-face{ display: block; margin-top: 12px; font: .95rem/1.5 var(--font-body, ShortStack, sans-serif); color: #d4b7ec; }
+.modern .welcome-strip .welcome-visits{ display: flex; align-items: center; justify-content: center; width: 100%; min-width: 0; margin: 24px 0 0; padding: 0; border: 0; }
+.modern .welcome-strip #views{ display: grid; justify-items: center; gap: 12px; min-width: 0; max-width: 100%; color: #cbb3db; font-size: .8rem; line-height: 1.7; overflow-wrap: anywhere; }
+.modern .welcome-strip .visit-digits{ max-width: 100%; color: #fff0c3; font-family: var(--font-display, Maple, sans-serif); font-weight: 400; letter-spacing: -.025em; text-shadow: 0 0 30px #ffd49b22; }
+.modern .welcome-strip .visit-label{ font: .73rem/1.6 var(--font-body, ShortStack, sans-serif); color: #d6bce9; letter-spacing: .035em; }
+.modern .visitor-footnote{ max-width: 34ch; min-height: 2.8em; margin: 28px 0 0; color: #b9a2cc; font-size: .68rem; line-height: 1.7; text-wrap: pretty; }
+.modern .visitor-corner{ position: absolute; bottom: 22px; color: #d9b5ef77; }
+.modern .visitor-corner-left{ left: 22px; }
+.modern .visitor-corner-right{ right: 22px; }
+.modern .visitor-corner svg{ width: 15px; height: 15px; }
+.modern.motion-on:not(.document-hidden) .visitor-stage.visitor-light-active .welcome-orbit{ animation: visitor-orbit-sway 6s ease-in-out infinite alternate; }
+.modern.motion-on:not(.document-hidden) .visitor-stage.visitor-light-active .visitor-corner{ animation: visitor-spark-breathe 3.5s ease-in-out infinite alternate; }
+.modern.motion-on:not(.document-hidden) .visitor-stage.visitor-light-active .visitor-corner-right{ animation-delay: -1.7s; }
+@keyframes visitor-orbit-sway{ from { transform: rotate(-12deg); } to { transform: rotate(12deg); } }
+@keyframes visitor-spark-breathe{ from { opacity: .35; scale: .8; } to { opacity: 1; scale: 1.1; } }
+@media (max-width: 600px){.modern .visitor-stage{ margin-top: 16px; }
+.modern .visitor-scene{ padding-block: 120px; }
+.modern .welcome-bottom.welcome-strip{ min-height: 390px; padding: 30px 22px 26px; border-radius: 28px; }
+.modern .visitor-kicker{ font-size: .57rem; gap: 8px; letter-spacing: .07em; }
+.modern .visitor-footnote{ font-size: .63rem; margin-top: 22px; }
+
+}
+@media (max-width: 360px){.modern .welcome-bottom.welcome-strip{ padding-inline: 16px; --visit-digit-size: 3.5rem; }
+.modern .visitor-kicker{ font-size: .5rem; }
+
+}
+@media (prefers-reduced-motion: reduce){.modern .visitor-stage *{ animation: none !important; }
+ }
+

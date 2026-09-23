@@ -1,0 +1,131 @@
+.modern .applause-card.applause-studio{ --applause-face: #cbb0ee; --applause-side: #76558c; --applause-base: #ffe5a9; --applause-base-side: #ac8249; --applause-face-radius: 50%; --applause-base-radius: 24px; display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); align-items: center; gap: 16px 55px; width: min(820px,100%); min-height: 0; margin: 80px auto 24px; padding: 30px 30px 12px; border: 0; border-radius: 0; background: none; box-shadow: none; text-align: center; }
+.modern .applause-card.applause-studio[hidden]{ display: none; }
+.modern.welcome-gated .applause-card.applause-studio{ display: none; }
+.modern .applause-card .applause-note-stack{ position: relative; width: min(290px,100%); margin: 15px auto; isolation: isolate; }
+.modern .applause-card .applause-paper{ position: absolute; inset: 0; display: block; border-radius: 3px 4px 7px 3px; box-shadow: 0 4px 9px #08031230; pointer-events: none; }
+.modern .applause-card .applause-paper-back{ z-index: -2; background: #bdacd8; transform: translate(-7px,5px) rotate(-9deg); }
+.modern .applause-card .applause-paper-middle{ z-index: -1; background: #b9d9c9; transform: translate(9px,3px) rotate(4deg); }
+.modern .applause-card .applause-note{ position: relative; width: 100%; min-height: 265px; padding: 49px 25px 28px; border: 1px solid #ffe5c7; border-radius: 3px 4px 8px 3px; background: linear-gradient(115deg,#ffcfad,#f6ba99 85%); color: #613d47; box-shadow: inset 0 1px #fff3, 0 14px 18px -12px #09031880; transform: rotate(-3deg); }
+.modern .applause-card.applause-studio h2{ margin: 0; color: #603746; font: 400 clamp(2.2rem,4vw,3.1rem)/1.05 'Patrick Hand',cursive; letter-spacing: -.015em; }
+.modern .applause-card .clap-tally{ display: block; margin: 20px 0 0; padding: 15px 5px 13px; border-block: 1px solid #8b526521; border-radius: 5px; background: linear-gradient(180deg,#fff4db24,#fff4db08); box-shadow: inset 0 1px #fff5, 0 1px #fff3; }
+.modern .applause-card #clap-total{ --visit-digit-size: clamp(2rem,4.1vw,3.4rem); position: relative; display: grid; align-items: center; width: 100%; min-width: 0; min-height: 1.8em; margin: 0; color: #643c4b; font: 400 1.1rem/1.35 'Patrick Hand',cursive; overflow-wrap: anywhere; }
+.modern .applause-card #clap-total .visit-digits{ color: #603746; font-family: 'Patrick Hand',cursive; font-weight: 400; font-synthesis: none; text-shadow: 0 1px #ffe8d2a6; }
+.modern .applause-card #clap-total .visit-digit-wheel{ mask-image: none; }
+.modern .applause-card #clap-total .visit-label{ position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.modern .applause-card.applause-studio #clap-status{ position: static; inset: auto; min-height: 1.4em; max-width: none; margin: 8px 0 0; color: #643c4b; font: 400 .9rem/1.4 'Patrick Hand',cursive; overflow-wrap: anywhere; }
+.modern .applause-card.applause-studio #clap-status[hidden]{ display: none; }
+.modern .applause-card .applause-note-doodle{ position: absolute; right: 14px; bottom: 9px; color: #ba657d; font: 1.7rem/1 Maple,sans-serif; transform: rotate(11deg); }
+.modern .applause-card .applause-pin{ position: absolute; top: 14px; left: calc(50% - 11px); width: 23px; height: 23px; border-radius: 50%; background: radial-gradient(circle at 30% 25%,#f6e8ff,#cdb0e0 30%,#795388 60%,#3d284e 90%); box-shadow: inset 0 1px 2px #fff9, 3px 5px 4px #743d4e55; transform: rotate(20deg); }
+.modern .applause-card .applause-pin::before{ content: ''; position: absolute; z-index: -1; top: 13px; left: 10px; width: 4px; height: 20px; border-radius: 3px; background: linear-gradient(90deg,#876675,#f5dde0,#73505c); transform: rotate(-25deg); box-shadow: 4px 1px 2px #6237452b; }
+.modern .applause-card .applause-pin i{ position: absolute; inset: 5px; border-radius: 50%; background: radial-gradient(circle at 35% 30%,#fbebff,#bfa2d1 45%,#6d487d); box-shadow: 0 1px 1px #38214255; }
+.modern .applause-card .applause-playground{ display: grid; justify-items: center; align-content: center; min-width: 0; perspective: 1000px; }
+.modern .applause-card.applause-studio .clap-button.applause-press{ display: grid; place-items: center; width: 270px; max-width: 100%; height: 250px; min-width: 0; min-height: 0; padding: 0; margin: 0; border: 0; border-radius: 42px; background: none; box-shadow: none; transform: none; isolation: auto; opacity: 1; -webkit-tap-highlight-color: transparent; }
+.modern .applause-card.applause-studio .clap-button.applause-press:hover,
+.modern .applause-card.applause-studio .clap-button.applause-press:active{ background: none; transform: none; }
+.modern .applause-card.applause-studio .clap-button.applause-press:disabled{ opacity: .66; }
+.modern .applause-card .applause-press:focus-visible{ outline: 2px solid #ffe5ac; outline-offset: 3px; }
+.modern .applause-card.applause-studio .clap-button > span.applause-machine{ display: block; position: relative; width: 180px; height: 180px; margin: 0; color: #56364b; font-size: 1rem; transform: rotateX(43deg) rotateZ(-28deg); transform-style: preserve-3d; }
+.modern .applause-card .applause-machine i,
+.modern .applause-card .applause-plunger,
+.modern .applause-card .applause-face{ display: block; position: absolute; }
+.modern .applause-card .applause-ground{ inset: 1px; border-radius: var(--applause-base-radius); transform: translateZ(-10px); box-shadow: 6px 14px 20px #09031780; background: #160d21; }
+.modern .applause-card .applause-base-bottom{ inset: -7px; border-radius: var(--applause-base-radius); background: var(--applause-base-side); transform: translateZ(-7px); box-shadow: 0 2px 0 #21142d55; }
+.modern .applause-card .applause-base-top{ inset: -7px; border: 1px solid #ffffff99; border-radius: var(--applause-base-radius); background: linear-gradient(135deg,#ffffff30,transparent 60%),var(--applause-base); transform: translateZ(-1px); box-shadow: inset 0 2px 2px #fff5, inset 0 -2px 1px #0002, 0 3px 0 var(--applause-base-side), 0 6px 0 var(--applause-base-side); }
+.modern .applause-card .applause-plunger{ inset: 13px; transform: translateZ(8px); transform-style: preserve-3d; }
+.modern .applause-card .applause-side{ inset: 0; border-radius: var(--applause-face-radius); background: linear-gradient(140deg,#ffffff35,transparent 45%,#1b082935),var(--applause-side); transform: translateZ(var(--depth)); box-shadow: 0 1px 0 var(--applause-side); }
+.modern .applause-card .applause-face{ inset: 0; display: grid; place-items: center; border: 1px solid #fff8; border-radius: var(--applause-face-radius); background: radial-gradient(circle at var(--applause-light-x,35%) var(--applause-light-y,25%),#ffffff70,transparent 67%),var(--applause-face); box-shadow: inset 0 3px 2px #fff7, inset 0 -3px 3px #331a3820; transform: translateZ(24px); }
+.modern .applause-card .applause-face svg{ width: 81px; height: 81px; color: #765a69; overflow: visible; }
+.modern .applause-card .applause-star{ fill: #fff0c8; stroke: #fff7df; stroke-width: 1.4; }
+.modern .applause-card .applause-star-shadow{ fill: #6a3b6433; }
+.modern .applause-card[data-applause-shape='rounded']{ --applause-face-radius: 27px; }
+.modern .applause-card[data-applause-shape='square']{ --applause-face-radius: 6px; }
+.modern .applause-card[data-applause-base='square']{ --applause-base-radius: 7px; }
+.modern .applause-card[data-applause-base='circle']{ --applause-base-radius: 50%; }
+.modern .applause-card[data-applause-base='none'] .applause-base-top,
+.modern .applause-card[data-applause-base='none'] .applause-base-bottom{ visibility: hidden; }
+.modern .applause-card[data-applause-base='none'] .applause-ground{ inset: 13px; border-radius: var(--applause-face-radius); }
+.modern .applause-card .applause-press-caption{ display: flex; align-items: center; gap: 13px; margin: -8px 0 0; color: #ead0b9; font: 400 1.5rem/1.4 'Patrick Hand',cursive; transform: rotate(-5deg); }
+.modern .applause-card .applause-press-caption span{ color: #c7abdf; font-size: 1.8rem; transform: rotate(-10deg); }
+.modern.motion-on .applause-card .applause-plunger{ transition: transform 320ms cubic-bezier(.18,1.8,.4,1); }
+.modern.motion-on .applause-card .applause-press:enabled:active .applause-plunger{ transform: translateZ(3px) scaleZ(.34); transition-duration: 75ms; }
+.modern.motion-on:not(.document-hidden) .applause-card .applause-press.clapping:not(:active) .applause-plunger{ animation: applause-press-spring 500ms cubic-bezier(.2,.75,.35,1); }
+@keyframes applause-press-spring{ 0%,100% { transform: translateZ(8px); } 20% { transform: translateZ(3px) scaleZ(.34); } 55% { transform: translateZ(11px) scaleZ(1.08); } 77% { transform: translateZ(7px) scaleZ(.97); } }
+.modern .applause-card .applause-customize{ grid-column: 1 / -1; min-width: 0; width: 100%; margin: 14px auto 0; border: 0; background: none; }
+.modern .applause-card .applause-customize summary{ display: flex; align-items: center; justify-content: center; gap: 10px; width: fit-content; max-width: 100%; min-height: 48px; margin: 0 auto; padding: 9px 11px 9px 17px; border: 1px solid #b9a0ce5c; border-radius: 999px; color: #f2e3fc; background: linear-gradient(155deg,#584064,#34243f); box-shadow: inset 0 1px #f6eaff25, 0 3px 0 #211329, 0 7px 16px #0d051626; font: 400 1.2rem/1.35 var(--font-display, 'Patrick Hand', cursive); text-align: center; list-style: none; cursor: pointer; }
+.modern .applause-card .applause-customize summary::-webkit-details-marker{ display: none; }
+.modern .applause-card .applause-customize summary > svg{ flex: 0 0 18px; width: 18px; height: 18px; color: #e7cef7; }
+.modern .applause-card .applause-customize summary > svg circle{ fill: #46314f; }
+.modern .applause-card .applause-customize summary > span{ display: grid; place-items: center; flex: 0 0 27px; width: 27px; height: 27px; margin-left: 3px; border: 1px solid #fff4; border-radius: 50%; color: #3f2b4b; background: #e3ccef; box-shadow: 0 2px 0 #25162f; font: 400 1.4rem/1 var(--font-display, 'Patrick Hand', cursive); }
+.modern .applause-card .applause-customize[open] summary > span{ transform: rotate(45deg); background: #ffe5a9; }
+.modern .applause-card .applause-controls{ display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px 16px; min-width: 0; margin-top: 20px; padding: 26px; border: 1px solid #b494d348; border-radius: 29px; background: radial-gradient(ellipse at 8% 0,#b187ce1c,transparent 58%),linear-gradient(145deg,#32223f,#251a31 68%); text-align: left; box-shadow: inset 0 1px #ecd1ff1a, inset 0 -1px #130b2080, 0 18px 36px -24px #07020ddd; }
+.modern .applause-card .applause-controls fieldset{ container: applause-field / inline-size; min-width: 0; margin: 0; padding: 12px; border: 1px solid #b499cd25; border-radius: 18px; background: #160d202e; box-shadow: inset 0 2px 5px #10081b35, 0 1px #eacbff09; }
+.modern .applause-card .applause-controls legend{ max-width: 100%; margin: 0; padding: 0 7px; color: #ead9f5; font: 400 1.25rem/1.35 var(--font-display, 'Patrick Hand', cursive); }
+.modern .applause-card .applause-options{ display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); align-items: stretch; gap: 8px; min-width: 0; }
+.modern .applause-card .studio-field-base .applause-options{ grid-template-columns: repeat(4,minmax(0,1fr)); }
+@container applause-field (max-width: 16rem){.modern .applause-card .applause-options,
+  .modern .applause-card .studio-field-base .applause-options{ grid-template-columns: repeat(2,minmax(0,1fr)); }
+
+}
+@container applause-field (max-width: 9rem){.modern .applause-card .applause-options,
+  .modern .applause-card .studio-field-base .applause-options{ grid-template-columns: minmax(0,1fr); }
+
+}
+.modern .applause-card .applause-option{ position: relative; display: block; min-width: 0; cursor: pointer; }
+.modern .applause-card .applause-option input{ position: absolute; width: 1px; height: 1px; margin: 0; padding: 0; overflow: hidden; opacity: 0; clip-path: inset(50%); }
+.modern .applause-card .applause-option > span{ position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 11px; min-width: 0; min-height: 102px; height: 100%; padding: 18px 6px 10px; border: 1px solid #b395cf30; border-radius: 12px; background: linear-gradient(160deg,#4b365640,#2b1d3780); color: #d7c1e5; box-shadow: inset 0 1px #f3d9ff08, 0 2px 3px #0b041a20; font: 400 .975rem/1.3 var(--font-body, 'Patrick Hand', cursive); text-align: center; }
+.modern .applause-card .studio-choice-label{ min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+.modern .applause-card .studio-choice-check{ position: absolute; top: 5px; right: 5px; width: 16px; height: 16px; padding: 1px; border: 1px solid #fff2; border-radius: 50%; background: #ffe5a9; color: #3c2848; opacity: 0; transform: scale(.65); }
+.modern .applause-card .applause-option input:checked + span{ border-color: #d8b8ee; color: #fff0d6; background: linear-gradient(155deg,#74548585,#4a33596b); box-shadow: inset 0 0 0 1px #dabcf132, inset 0 1px #fff2, 0 3px 8px #13091d42; }
+.modern .applause-card .applause-option input:checked + span .studio-choice-check{ opacity: 1; transform: scale(1); }
+.modern .applause-card .applause-option input:focus-visible + span,
+.modern .applause-card .applause-customize summary:focus-visible{ outline: 3px solid #ffe2a4; outline-offset: 3px; }
+.modern .applause-card .applause-option input:disabled + span{ opacity: .55; cursor: default; }
+.modern .applause-card .studio-shape{ --sample-face: var(--applause-face); --sample-side: var(--applause-side); position: relative; display: block; flex: 0 0 36px; width: 38px; height: 36px; border: 1px solid #fff7; border-radius: 8px; background: linear-gradient(145deg,#ffffff60,transparent 65%),var(--sample-face); box-shadow: inset 0 2px 1px #fff4, 0 4px 0 var(--sample-side), 2px 7px 6px #0d061b50; transform: rotate(-9deg); }
+.modern .applause-card .studio-shape::after{ content: ''; position: absolute; top: 7px; left: 8px; width: 11px; height: 4px; border-radius: 50%; background: #fff7; transform: rotate(-25deg); }
+.modern .applause-card .studio-field-base .studio-shape{ --sample-face: var(--applause-base); --sample-side: var(--applause-base-side); flex-basis: 25px; height: 25px; transform: rotate(-9deg) skewX(-9deg); box-shadow: inset 0 2px 1px #fff4, 0 3px 0 var(--sample-side), 2px 6px 6px #0d061b50; }
+.modern .applause-card .studio-shape-circle{ border-radius: 50%; }
+.modern .applause-card .studio-shape-rounded{ border-radius: 10px; }
+.modern .applause-card .studio-shape-square{ border-radius: 3px; }
+.modern .applause-card .studio-field-base .studio-shape-none{ border: 1px dashed #b49bc9; border-radius: 7px; background: transparent; box-shadow: none; }
+.modern .applause-card .studio-shape-none::after{ top: calc(50% - .5px); left: 7px; width: 22px; height: 1px; border-radius: 0; background: #c9b0da; transform: rotate(-32deg); }
+.modern .applause-card .applause-swatches .applause-option > span{ min-height: 92px; gap: 9px; padding-top: 16px; }
+.modern .applause-card .studio-swatch{ position: relative; display: block; flex: 0 0 31px; width: 33px; height: 31px; border: 1px solid #fff9; border-radius: 50%; background: radial-gradient(ellipse at 30% 15%,#ffffffb8,transparent 53%),var(--swatch); box-shadow: inset 0 2px 2px #fff4, inset 0 -3px 2px #2a15352e, 0 3px 0 color-mix(in srgb,var(--swatch),#281331 35%), 0 6px 7px #0b03194d; }
+.modern .applause-card .studio-swatch::after{ content: ''; position: absolute; inset: 3px 5px 14px; border-top: 1px solid #fff8; border-radius: 50%; transform: rotate(-24deg); }
+.modern .applause-card .applause-storage{ grid-column: 1 / -1; margin: -1px 2px 0; padding-top: 12px; border-top: 1px solid #b494d322; color: #c4add4; font: 400 .95rem/1.5 var(--font-body, 'Patrick Hand', cursive); }
+@media (hover: hover){.modern .applause-card .applause-customize summary:hover{ border-color: #dcc0ec8c; color: #fff1dd; box-shadow: inset 0 1px #f6eaff35, 0 3px 0 #211329, 0 8px 19px #0d05163d; }
+.modern .applause-card .applause-option input:enabled:not(:checked) + span:hover{ border-color: #c7a4dd85; background-color: #63457340; color: #fff0e0; }
+
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference){.modern.motion-on:not(.document-hidden) .applause-card .applause-option input:enabled + span:hover :is(.studio-shape,.studio-swatch){ transform: translateY(-2px) rotate(-5deg); }
+
+}
+.modern.motion-on:not(.document-hidden) .applause-card :is(.applause-face,.applause-side,.applause-base-top,.applause-base-bottom,.applause-ground){ transition: background-color 280ms ease, border-radius 420ms cubic-bezier(.2,.75,.2,1), box-shadow 280ms ease; }
+.modern.motion-on:not(.document-hidden) .applause-card :is(.applause-option > span,.applause-customize summary){ transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease; }
+.modern.motion-on:not(.document-hidden) .applause-card :is(.studio-choice-check,.studio-shape,.studio-swatch,.applause-customize summary > span){ transition: transform 280ms cubic-bezier(.2,1.45,.4,1), opacity 180ms ease, background-color 240ms ease, box-shadow 240ms ease; }
+@supports (interpolate-size: allow-keywords) and selector(details::details-content){.modern.motion-on:not(.document-hidden) .applause-card .applause-customize{ interpolate-size: allow-keywords; }
+.modern.motion-on:not(.document-hidden) .applause-card .applause-customize::details-content{ block-size: 0; opacity: 0; overflow: clip; transition: block-size 420ms cubic-bezier(.2,.7,.2,1), opacity 240ms ease, content-visibility 420ms allow-discrete; }
+.modern.motion-on:not(.document-hidden) .applause-card .applause-customize[open]::details-content{ block-size: auto; opacity: 1; }
+
+}
+@media (max-width: 650px){.modern .applause-card.applause-studio{ grid-template-columns: minmax(0,1fr); width: 100%; margin-top: 50px; padding: 22px 16px 5px; gap: 8px; }
+.modern .applause-card .applause-note-stack{ width: min(260px,calc(100% - 16px)); }
+.modern .applause-card .applause-paper-back{ transform: translate(-9px, 9px); }
+.modern .applause-card .applause-paper-middle{ transform: translate(9px, 5px); }
+.modern .applause-card .applause-note{ min-height: 235px; padding: 44px 23px 36px; transform: none; }
+.modern .applause-card.applause-studio h2{ font-size: clamp(2rem, 8.8vw, 2.7rem); }
+.modern .applause-card.applause-studio .clap-button.applause-press{ height: 225px; }
+.modern .applause-card .applause-controls{ grid-template-columns: minmax(0,1fr); padding: 20px 14px; gap: 18px; border-radius: 23px; }
+.modern .applause-card .applause-controls fieldset{ padding: 11px; }
+.modern .applause-card .applause-customize{ margin-top: 19px; }
+
+}
+@media (prefers-reduced-motion: reduce){.modern .applause-card :is(.applause-plunger,.applause-face,.applause-side,.applause-base-top,.applause-base-bottom,.applause-ground,.applause-option > span,.applause-customize summary,.studio-choice-check,.studio-shape,.studio-swatch,.applause-customize summary > span),
+  .modern .applause-card .applause-customize::details-content{ animation: none !important; transition: none !important; }
+
+}
+@media (forced-colors: active){.modern .applause-card .applause-option input:checked + span{ outline: 2px solid Highlight; outline-offset: -3px; }
+.modern .applause-card .studio-choice-check{ color: HighlightText; background: Highlight; }
+.modern .applause-card .studio-swatch{ forced-color-adjust: none; }
+
+}
+

@@ -1,0 +1,14 @@
+.modern #welcome:not([hidden]) [data-welcome-continuation] > .journeys,
+.modern #welcome:not([hidden]) [data-welcome-continuation] > .shortcuts-section,
+.modern #welcome:not([hidden]) ~ .applause-studio:not([hidden]){
+  margin-block-start: clamp(14rem, 72svh, 56.25rem);
+}
+html.section-arrivals-clipping{ overflow-x: clip; }
+.modern :is(.section-arrival-waiting, .section-arrival-queued){ opacity: 0; }
+.modern .section-arrival-running{ will-change: transform, opacity; }
+.modern:is(.motion-paused, .document-hidden) :is(.section-arrival-waiting, .section-arrival-queued),
+.modern :is(.section-arrival-waiting, .section-arrival-queued):focus-within{ opacity: 1; }
+@media (prefers-reduced-motion: reduce){.modern :is(.section-arrival-waiting, .section-arrival-queued){ opacity: 1; }
+
+}
+

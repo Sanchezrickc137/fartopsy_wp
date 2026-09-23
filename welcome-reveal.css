@@ -1,0 +1,89 @@
+.modern.motion-on .hero-copy.hero-editorial{ animation: none; }
+.modern .hero{
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+  gap: clamp(28px, 4vw, 48px);
+  min-height: 0;
+}
+.modern .hero-copy.hero-editorial{
+  width: 100%;
+  padding: clamp(56px, 6vw, 88px) 0 0;
+  text-align: center;
+}
+.modern .hero-editorial .welcome-greeting{
+  max-width: 72rem;
+  margin: 0 auto;
+  color: #ded0eb;
+  font-family: 'Patrick Hand', cursive;
+  font-weight: 400;
+  font-synthesis: none;
+}
+.modern .hero-editorial .welcome-reveal-title{
+  display: block;
+  max-width: 24ch;
+  margin: 0 auto 2rem;
+  font-family: 'Patrick Hand', cursive;
+  font-size: clamp(2.375rem, 6.5vw, 5.5rem);
+  font-weight: 400;
+  line-height: 1.14;
+  letter-spacing: -.02em;
+  color: #fff0c5;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+.modern .welcome-reveal-title em{
+  display: inline-block;
+  max-width: 100%;
+  font-style: normal;
+  color: #ffc58e;
+}
+.modern .hero-editorial .welcome-reveal-description{
+  display: block;
+  max-width: 50ch;
+  margin-inline: auto;
+  font-size: clamp(1.45rem, 2.1vw, 1.75rem);
+  line-height: 1.75;
+  text-wrap: pretty;
+}
+.modern .welcome-reveal-word{
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  vertical-align: baseline;
+}
+.modern .hero-art{
+  width: 100%;
+  max-width: 440px;
+  margin-inline: auto;
+}
+.modern #welcome .hanging-description{
+  font-family: 'Patrick Hand', cursive;
+  font-weight: 400;
+  font-synthesis: none;
+  letter-spacing: -.012em;
+}
+@media (max-width: 600px){.modern .hero-copy.hero-editorial{ padding-top: 44px; }
+.modern .hero-editorial .welcome-reveal-title{ margin-bottom: 1.5rem; }
+
+}
+.modern .welcome-reveal-active .welcome-reveal-title,
+.modern .welcome-reveal-active .welcome-reveal-word{
+  opacity: var(--welcome-opacity, 1);
+  transform: translateY(var(--welcome-offset, 0px));
+  filter: blur(var(--welcome-blur, 0px));
+}
+.modern.motion-paused .welcome-reveal-title,
+.modern.motion-paused .welcome-reveal-word{
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+@media (prefers-reduced-motion: reduce){.modern .welcome-reveal-title,
+  .modern .welcome-reveal-word{
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
+}
+

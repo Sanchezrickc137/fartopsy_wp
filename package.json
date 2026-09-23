@@ -1,0 +1,14 @@
+{
+  "name": "fartopsy-welcome",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Standalone Fartopsy Intro and Welcome page. Static hosting, no dependencies or build step.",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "node tools/serve.mjs",
+    "start": "node tools/serve.mjs",
+    "check": "node tools/check.mjs",
+    "test": "npm run check"
+  }
+}

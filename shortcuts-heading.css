@@ -1,0 +1,61 @@
+.modern .shortcuts-section{ position: relative; max-width: 1080px; margin-inline: auto; }
+.modern .shortcuts-heading{
+  position: relative; z-index: 2; width: fit-content; max-width: 100%;
+  margin: 0 auto 3.2rem; padding: .15em .65em .2em;
+  color: #ffe7a7; font-family: 'Patrick Hand', cursive; font-weight: 400;
+  font-size: clamp(3.1rem, 7.4vw, 5.4rem); line-height: 1.15; letter-spacing: -.01em;
+  text-align: center; overflow: visible; overflow-wrap: normal; pointer-events: none;
+}
+.modern .shortcuts-heading-art{ position: relative; display: inline-block; max-width: 100%; pointer-events: auto; }
+.modern .shortcuts-heading .credit-handwriting{ --handwriting-depth: #da9b92; flex-wrap: wrap; justify-content: center; }
+.modern .shortcuts-heading .credit-handwriting-ink{
+  -webkit-text-stroke-width: .008em;
+  text-shadow: 0 -.012em #fff9dd99, 0 .07em .16em #170d2870;
+}
+.modern .shortcuts-heading .credit-handwriting-ink::before{
+  transform: translate(.014em,.035em);
+  text-shadow: 0 .018em #be8491, 0 .038em #916386, 0 .061em #5b3a69, 0 .1em .08em #130b235e;
+}
+.modern .shortcuts-heading .credit-handwriting-letter:nth-child(3n){ color: #ffd0b2; }
+.modern .shortcuts-heading .credit-handwriting-letter:nth-child(5n){ color: #decbff; --handwriting-depth: #a789bd; }
+.modern .shortcuts-heading .credit-handwriting-letter{ transition: transform 300ms cubic-bezier(.2,.8,.3,1.25); }
+.modern .shortcuts-scribble{
+  position: absolute; display: block; width: .6em; height: auto;
+  color: #c6b0e9; overflow: visible; pointer-events: none;
+  filter: drop-shadow(0 2px #704f88);
+  transition: transform 350ms cubic-bezier(.2,.8,.3,1.25);
+}
+.modern .shortcuts-scribble-loop{ width: .68em; left: -.75em; bottom: .05em; transform: rotate(-14deg); }
+.modern .shortcuts-scribble-star{ right: -.64em; top: -.04em; width: .49em; color: #b9e5d0; transform: rotate(8deg); }
+.modern .shortcuts-section .journeys{ margin-top: 0; }
+.modern .shortcuts-heading-waiting{ opacity: 0; }
+.modern .shortcuts-heading-running{ will-change: transform; }
+@media (hover: hover) and (pointer: fine){html:not(.intro-active) .modern.motion-on:not(.document-hidden):not(.credits-open) .shortcuts-heading:not(.shortcuts-heading-running) .shortcuts-heading-art:hover .credit-handwriting-letter:nth-child(odd){ transform: translateY(-.04em) rotate(-2deg); }
+html:not(.intro-active) .modern.motion-on:not(.document-hidden):not(.credits-open) .shortcuts-heading:not(.shortcuts-heading-running) .shortcuts-heading-art:hover .credit-handwriting-letter:nth-child(even){ transform: translateY(-.018em) rotate(2deg); }
+html:not(.intro-active) .modern.motion-on:not(.document-hidden):not(.credits-open) .shortcuts-heading-art:hover .shortcuts-scribble-star{ transform: translateY(-3px) rotate(17deg); }
+html:not(.intro-active) .modern.motion-on:not(.document-hidden):not(.credits-open) .shortcuts-heading-art:hover .shortcuts-scribble-loop{ transform: translateX(-2px) rotate(-19deg); }
+
+}
+@media (max-width: 980px){.modern .shortcuts-heading{ margin-bottom: 2.5rem; }
+
+}
+@media (max-width: 600px){.modern .shortcuts-heading{ font-size: clamp(2.85rem, 12vw, 4rem); margin-bottom: 2rem; }
+
+}
+.modern:is(.motion-paused,.document-hidden) .shortcuts-heading-waiting,
+.modern .shortcuts-section:focus-within .shortcuts-heading-waiting{ opacity: 1; }
+.modern:is(.motion-paused,.document-hidden,.credits-open) .shortcuts-heading .credit-handwriting-letter,
+html.intro-active .modern .shortcuts-heading .credit-handwriting-letter{ transform: none !important; transition: none; }
+.modern:is(.motion-paused,.document-hidden,.credits-open) .shortcuts-scribble,
+html.intro-active .modern .shortcuts-scribble{ transition: none; }
+@media (prefers-reduced-motion: reduce){.modern .shortcuts-heading-waiting{ opacity: 1; }
+.modern .shortcuts-heading .credit-handwriting-letter{ transform: none !important; transition: none; }
+.modern .shortcuts-scribble{ transition: none; }
+
+}
+@media (forced-colors: active){.modern .shortcuts-heading .credit-handwriting-letter{ color: CanvasText; }
+.modern .shortcuts-heading .credit-handwriting-ink{ text-shadow: none; }
+.modern .shortcuts-scribble{ color: CanvasText; filter: none; }
+
+}
+

@@ -1,0 +1,28 @@
+/* Patrick Hand 400, unmodified Google Fonts original, SIL OFL 1.1.
+   https://github.com/google/fonts/tree/main/ofl/patrickhand
+   Copyright and license accompany the local font in assets/fonts/patrick-hand. */
+@font-face {
+  font-family: 'Patrick Hand';
+  src: url('./assets/fonts/patrick-hand/PatrickHand-Regular.ttf') format('truetype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+.credit-handwriting {
+  position: relative; display: inline-flex; align-items: baseline; max-width: 100%;
+  color: inherit; font-family: 'Patrick Hand', cursive; font-style: normal; font-weight: 400;
+  font-synthesis: none; font-size: inherit; line-height: 1.1; letter-spacing: -.01em;
+  white-space: pre; overflow: visible;
+}
+.credit-handwriting-accessible { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; border: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.credit-handwriting-letter { position: relative; display: inline-block; flex: 0 0 auto; overflow: visible; }
+.credit-handwriting-ink {
+  position: relative; isolation: isolate; display: inline-block; color: inherit;
+  opacity: 1; overflow: visible; transform: none; transform-origin: 30% 75%;
+  clip-path: none; animation: none; -webkit-text-stroke: .005em currentColor;
+  text-shadow: 0 -.012em #fff4d05c; paint-order: stroke fill;
+}
+.credit-handwriting-ink::before {
+  content: attr(data-letter); position: absolute; z-index: -1; inset: 0;
+  color: var(--handwriting-depth,#ad7c98); -webkit-text-stroke: .007em currentColor;
+  transform: translate(.013em,.032em);
+  text-shadow: 0 .015em #875b81, 0 .032em #56354e, 0 .06em .035em #10071d55;
+}

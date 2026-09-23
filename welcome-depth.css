@@ -1,0 +1,45 @@
+.modern [data-depth-intro],
+.modern [data-visitor-stage]{
+  position: relative;
+  --welcome-depth-perspective: 1200px;
+  --welcome-depth-exit-z: -250px;
+  --welcome-depth-enter-z: -210px;
+  --welcome-depth-blur: 1.8px;
+}
+.modern [data-depth-intro].welcome-depth-active > .hero{
+  transform-origin: 50% 52%;
+  transform: perspective(var(--welcome-depth-perspective))
+    translate3d(0, calc(var(--welcome-depth-progress, 0) * -26px), calc(var(--welcome-depth-progress, 0) * var(--welcome-depth-exit-z)))
+    scale(calc(1 - var(--welcome-depth-progress, 0) * .06));
+  opacity: calc(1 - var(--welcome-depth-progress, 0));
+  filter: blur(calc(var(--welcome-depth-progress, 0) * var(--welcome-depth-blur)));
+  transition: none;
+}
+.modern [data-visitor-stage].welcome-depth-active > .visitor-scene{
+  transform-origin: 50% 50%;
+  transform: perspective(var(--welcome-depth-perspective))
+    translate3d(0, calc((1 - var(--welcome-depth-progress, 1)) * 38px), calc((1 - var(--welcome-depth-progress, 1)) * var(--welcome-depth-enter-z)))
+    scale(calc(.94 + var(--welcome-depth-progress, 1) * .06));
+  opacity: calc(.08 + var(--welcome-depth-progress, 1) * .92);
+  filter: blur(calc((1 - var(--welcome-depth-progress, 1)) * var(--welcome-depth-blur)));
+  transition: none;
+}
+.modern [data-depth-intro].welcome-depth-active > .hero:has(:is(a[href], button, input, select, textarea, [tabindex]:not([tabindex="-1"])):focus-visible),
+.modern [data-visitor-stage].welcome-depth-active > .visitor-scene:has(:is(a[href], button, input, select, textarea, [tabindex]:not([tabindex="-1"])):focus-visible),
+.modern:is(.motion-paused, .document-hidden) [data-depth-intro] > .hero,
+.modern:is(.motion-paused, .document-hidden) [data-visitor-stage] > .visitor-scene,
+html.intro-active:not(.intro-revealing) .modern [data-depth-intro] > .hero,
+html.intro-active:not(.intro-revealing) .modern [data-visitor-stage] > .visitor-scene{
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+@media (prefers-reduced-motion: reduce){.modern [data-depth-intro].welcome-depth-active > .hero,
+  .modern [data-visitor-stage].welcome-depth-active > .visitor-scene{
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+
+}
+

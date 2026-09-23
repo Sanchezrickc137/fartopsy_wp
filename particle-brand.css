@@ -1,0 +1,48 @@
+.modern .site-header .particle-wordmark{
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: max-content;
+  max-width: 100%;
+  min-height: 48px;
+  padding: 0;
+  gap: 0;
+  overflow: visible;
+  border-radius: 8px;
+}
+.modern .site-header .particle-wordmark .brand-name,
+.modern .site-header .particle-wordmark:hover .brand-name{
+  display: block;
+  color: #fff0bd;
+  font: 700 clamp(2.375rem, 3.2vw, 2.875rem)/1.16 Maple, sans-serif;
+  letter-spacing: -.04em;
+  text-shadow: 1px 2px #edb38b, 3px 4px #9274b27a;
+  white-space: nowrap;
+  transform: none;
+  transition: none;
+}
+.modern .site-header .particle-wordmark .brand-particles{
+  position: absolute;
+  z-index: 1;
+  display: none;
+  max-width: none;
+  pointer-events: none;
+  user-select: none;
+}
+.modern .site-header .particle-wordmark.particle-brand-ready .brand-name{ opacity: 0; }
+.modern .site-header .particle-wordmark.particle-brand-ready .brand-particles{ display: block; }
+.modern .site-header .particle-wordmark:focus-visible{ outline-offset: 9px; }
+@media (max-width: 600px){.modern .site-header .particle-wordmark .brand-name,
+  .modern .site-header .particle-wordmark:hover .brand-name{ font-size: 2rem; }
+
+}
+@media (prefers-reduced-motion: reduce), (forced-colors: active){.modern .site-header .particle-wordmark.particle-brand-ready .brand-name{ opacity: 1; }
+.modern .site-header .particle-wordmark.particle-brand-ready .brand-particles{ display: none; }
+
+}
+@media (forced-colors: active){.modern .site-header .particle-wordmark .brand-name{ text-shadow: none; color: LinkText; }
+
+}
+
